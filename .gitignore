@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual envs
+.venv/
+.venv2/
+venv/
+
+# Project outputs
+artifacts/
+
+# Repo metadata
+.github/
+
+# OS junk 
+.DS_Store
+Thumbs.db
