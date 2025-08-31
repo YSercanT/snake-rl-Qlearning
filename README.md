@@ -35,7 +35,7 @@ source .venv/bin/activate
 
 # Dependencies
 pip install -r requirements.txt
-# requirements.txt: numpy, pygame, gymnasium ,matplotlib
+# requirements.txt: numpy, pygame ,matplotlib
 
 ```
 
@@ -140,7 +140,7 @@ python -m src.evaluate --checkpoint artifacts/runs/<RUN_ID>/qtable.pkl \
 * **Agent (`agent.py`)** — ε-greedy **tabular Q-learning**
   $Q(s,a) ← Q(s,a) + α ( r + γ max_{a'} Q(s',a') − Q(s,a) )$
 * **Environment (`env.py`)** — small custom snake grid with food; exposes a compact discrete state; renders via Pygame.
-* **Training (`train.py`)** — runs episodes, logs `scores.csv` / `metrics.json`, saves `qtable.pkl`, (optionally) `score_plot.png`.
+* **Training (`train.py`)** — runs episodes, logs `scores.csv` / `metrics.json`, saves `qtable.pkl`, `score_plot.png`.
 * **Evaluation (`evaluate.py`)** — runs a greedy policy, writes `eval.json` (mean/std/min/max).
 
 ---
@@ -154,7 +154,7 @@ src/
   env.py         # SnakeEnv (logic + Pygame rendering)
   train.py       # training loop + logging/plots
   evaluate.py    # greedy evaluation -> eval.json
-  utils.py       # run folder + I/O helpers (+ optional plotting)
+  utils.py       # run folder + I/O helpers 
 artifacts/
   runs/          # per-run outputs (auto-created)
 requirements.txt
