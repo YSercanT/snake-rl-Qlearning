@@ -82,13 +82,14 @@ artifacts/
 ### `python -m src.main`
 
 Main entrypoint for **demo/train/eval**.
-Modes
 
-* demo — Runs a random policy (no learning). Used this to smoke‑test the window/renderer, tweak --fps / --frame-skip, or capture quick visuals.
+**Modes**
 
-* train — Trains the Q‑learning agent. If --render is provided, episodes are visualized. Artifacts are saved under artifacts/runs/<timestamp>-<tag>/ (e.g., qtable.pkl, scores.csv, metrics.json, score_plot.png).
+* **demo** — Runs a random policy (no learning). Used this to smoke‑test the window/renderer, tweak --fps / --frame-skip, or capture quick visuals.
 
-* eval — Evaluates a saved model with a greedy policy (argmax). Loads the latest run automatically and writes eval.json next to the checkpoint. You can also evaluate a specific checkpoint via python -m src.evaluate --checkpoint ....
+* **train** — Trains the Q‑learning agent. If --render is provided, episodes are visualized. Artifacts are saved under artifacts/runs/<timestamp>-<tag>/ (e.g., qtable.pkl, scores.csv, metrics.json, score_plot.png).
+
+* **eval** — Evaluates a saved model with a greedy policy (argmax). Loads the latest run automatically and writes eval.json next to the checkpoint. You can also evaluate a specific checkpoint via python -m src.evaluate --checkpoint ....
 
 
 | Argument       | Type                        | Default | Purpose                                 |
